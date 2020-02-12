@@ -32,8 +32,6 @@ export class ArtistaComponent implements OnInit {
     this.api.getArtista(idArtista)
       .subscribe(artista => {
         this.artista = artista;
-        console.log(artista);
-        
         this.cargando = true;
       }, error => this.cargando = false);
   }
