@@ -1,0 +1,45 @@
+<app-spinner *ngIf=!cargando></app-spinner>
+<div class="row container py-5 animated fadeIn" *ngIf=cargando>
+    <div class="col-4">
+        <img [src]="artista.images | noImagen" class="img-thumbnail img-circle">
+    </div>
+    <div class="col">
+        <h3>{{ artista.name }}</h3>
+        <p>
+            <a [href]="artista.external_urls.spotify" target="_blank">Ir a la página del artista</a>
+        </p>
+    </div>
+    <div class="col-4 text-right">
+        <button class="btn btn-outline-danger" [routerLink]="['/inicio']">
+        Regresar
+      </button>
+    </div>
+</div>
+
+<div class="container" *ngIf=cargando>
+    <div class="col">
+        <table class="table text-white">
+            <thead>
+                <tr>
+                    <th>Foto</th>
+                    <th>Album</th>
+                    <th>Canción</th>
+                    <th>Vista Previa</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let track of tracksPrincipales">
+                    <td>
+                        <img [src]="track.album.images | noImagen" class="img-thumb">
+                    </td>
+                    <td>{{ track.album.name }}</td>
+                    <td>{{ track.name }}</td>
+                    <td>
+                        <iframe [src]="track.uri | domSeguro" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media">
+                        </iframe>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

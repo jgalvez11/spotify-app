@@ -1,27 +1,24 @@
 # SpotifyApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.22.
+Proyecto generado con [Angular CLI](https://github.com/angular/angular-cli) version 8.3.22.
 
-## Development server
+## Despliegue servidor de desarrollo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Ejecutar `npm install` para instalar las dependencias
 
-## Code scaffolding
+- Ejecutar comando `ng serve -o`. Se abrirá una página web con la url http://localhost:4200
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Generar build
 
-## Build
+Ejecutar `ng build`. La carpeta contenedora del build se llama `dist/`. Usar el comando `ng build --prod` para generar una versión productiva.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Pruebas unitarias
 
-## Running unit tests
+Ejecutar `ng test` para ejecutar las pruebas unitarias via: [Karma](https://karma-runner.github.io).
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Pruebas e2e
 
-## Running end-to-end tests
+Ejecutar `ng e2e` para ejecutar las pruebas punto a punto via [Protractor](http://www.protractortest.org/).
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Para mayor información ejecutar `ng help` o visitar la página [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
