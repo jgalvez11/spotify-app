@@ -20,7 +20,7 @@ Ejecutar `ng test` para ejecutar las pruebas unitarias via: [Karma](https://karm
 
 Ejecutar `ng e2e` para ejecutar las pruebas punto a punto via [Protractor](http://www.protractortest.org/).
 
-## URL servidor Heroku
+## URL público servidor Heroku
 
 https://spotify-app-front.herokuapp.com/
 
